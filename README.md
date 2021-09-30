@@ -1,1 +1,1 @@
-# JS_PROJECT
+# JavaScript_Study
