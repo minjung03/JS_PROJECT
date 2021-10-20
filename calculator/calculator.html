@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>계산기 연습</title>
+        <style>
+            * { /* 전체에 대하여 */
+                box-sizing: border-box;
+            }
+            #result {
+                width: 180px;
+                height: 50px;
+                margin: 5px;
+                text-align: right;
+            }
+            #operator {
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+                text-align: center;
+            }
+            button{
+                width: 50px;
+                height: 50px;
+                margin: 5px;
+            }
+        </style>
+        <script src="calculator.js" defer></script>
+    </head>
+    <body>
+
+        <input id="operator"> <!--id는 js와 연결 시 꼭 필요하다**-->
+        <input type="number" id="result"> <!-- type="number" 형식 지정/결과는 항상 숫자이다-->
+        
+        <!--id는 길더라도 의미를 표현해서 작성하기**-->
+        <!-- id는 단순히 css에 사용하려 있는것만은 X 클라이언트에서도 사용!?-->
+        <div class="row">
+            <button id="num-7">7</button>
+            <button id="num-8">8</button>
+            <button id="num-9">9</button>
+            <button id="plus">+</button>
+        </div>
+
+        <div class="row">
+            <button id="num-4">4</button>
+            <button id="num-5">5</button>
+            <button id="num-6">6</button>
+            <button id="minus">-</button>
+        </div>
+
+        <div class="row">
+            <button id="num-1">1</button>
+            <button id="num-2">2</button>
+            <button id="num-3">3</button>
+            <button id="divide">/</button>
+        </div>
+
+        <div class="row">
+            <button id="clear">c</button>
+            <button id="num-0">0</button>
+            <button id="equal">=</button>
+            <button id="mul">x</button>
+        </div>
+
+    </body>
+</html>
