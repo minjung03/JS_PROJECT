@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+        
+        </style>
+    </head>
+
+    <body>
+        <!-- Dom프로퍼티의 on<event> 속성에 핸들러 할당 -->
+
+        <!-- (주의)onclick 프로퍼티는 단 하나밖에 없기때문에, 복수의 이벤트 핸들러 할당 불가*** -->
+        <!-- 그래서 사용하는 것이 addEventListener -->
+        <input id="elem" type="button" onclick="alert('이전')" value="클릭해 주세요.">
+        <script> 
+            elem.onclick = function(){
+                // onclick="alert('이전')" <= 기존에 작성한 핸들러를 덮어쓴다
+                alert('감사합니다');
+            }
+        </script> 
+
+        <!-- 함수 할당 시에 () 안쓴다*** 진짜 많이 틀림 -->
+    </body>
+</html>

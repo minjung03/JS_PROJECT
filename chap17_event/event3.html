@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <style>
+        
+        </style>
+    </head>
+
+    <body>
+     
+        <input id="elem" type="button" value="클릭해 주세요.">
+        <script>
+            // let elem = document.getElementById('elem'); -- 이거 없어도 바로 가져온다~
+            function headler1(){
+                alert("thank you");
+            }
+            function headler2(){
+                alert("thank you, again!!");
+            }
+            elem.onclick = () => alert("hi");
+            elem.addEventListener("click", headler1); /* () 사용하지 않는다** (주의) 많이 틀림 */
+            elem.addEventListener("click", headler2);
+        </script> 
+    </body>
+</html>
