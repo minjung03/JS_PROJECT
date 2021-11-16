@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <a name="list">the list</a>
+
+        <ul>
+            <li><a href="https://www.naver.com">www.naver.com</a></li>
+            <li><a href="https://design.google">https://design,google</a></li>
+            <li><a href="http://nodejs.org">http://nodejs.org</a></li>
+            <li><a href="https://ko.javascript.info">https://ko.javascript.info</a></li>
+        </ul>
+
+        <script>
+            // 따옴표는 통일해서 사용하는 것이 좋다!!
+            let link = document.querySelectorAll('a');
+
+            // http를 제외한 것은 색상을 오렌지로 주기!
+            // 여기 작성
+            for(let link of links){
+                let href = link.getAttribute('href');
+
+                if(!href) continue;
+                if(!href.includes("://")) continue;
+                if(href.startsWith('http://')) continue;
+
+                link.style.color = 'orange';
+            }
+        </script>
+    </body>
+</html>

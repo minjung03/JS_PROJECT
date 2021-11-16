@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+           .hour {
+                color: red
+            }
+            .min {
+                color: green
+            }
+            .sec {
+                color: blue
+            }
+        </style>
+    </head>
+
+    <body>
+        
+        <div id="clock">
+            <span class="hour">hh</span> :
+            <span class="min">mm</span> :
+            <span class="sec">ss</span>
+        </div>
+
+        <script>
+            let timerId;
+
+            function update(){
+                let clock = document.getElementById('clock');
+                let date = new Date();
+
+                let hours = date.getHours(); // 1~9까지는 두자리 표현이 안됨, 그래서 if로 체크 후 0 넣어주기
+                if (hours < 10) hours = '0' + hours;
+                clock.children[0].innerHTML = hours;
+
+
+                let min = date.getMinutes();
+                if (min < 10) min = '0' + min;
+                clock.children[1].innerHTML = min;
+
+                let sec = date.getSeconds();
+                if (sec < 10) sec = '0' + sec;
+                clock.children[2].innerHTML = sec;
+            }
+
+            function clockStart(){
+                timerId = setInterval(update, 1000); // 1초 후에 update 호출
+                update(); // 첫 번째 setInterval이 실행되기 전까지 기다릴 필요 없이 강제로 한번 호출
+                // 맨 처음에 1초 텀을 가지고 싶지 않아서
+            }
+
+            function clockStop(){
+                clearInterval(timerId);  /* 대부분 timerId 이름을 사용한다** 100이면 100 */
+            }
+
+            clockStart();
+
+        </script>
+
+        <!-- input type="button" 을 더 추천! --> <!-- **onclick에 있는 함수는 호출보다 위에 있어야한다 -->
+        <input type="button" value="start" onclick="clockStart()">
+        <input type="button" value="stop" onclick="clockStop()">
+
+    </body>
+
+</html>

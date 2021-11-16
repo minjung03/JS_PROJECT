@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .order[order-state="new"]{
+                color: green;
+            }
+            .order[order-state="pending"]{
+                color: blue;
+            }
+            .order[order-state="canceled"]{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 요소에 스타일 적용을 위해 비표준 속성 많이 사용!-->
+        <div show-info="name"></div>
+        <div show-info="age"></div>
+
+        <div class="order" order-state="new">
+            A new order.
+        </div>
+
+        <div class="order" order-state="pending">
+            A pending order.
+        </div>
+
+        <div class="order" order-state="canceled">
+            A canceled order.
+        </div>
+    </body>
+</html>

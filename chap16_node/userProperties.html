@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body id="test" something = "non-standard">
+
+        <script>
+            document.body.myData = {
+                name : 'Mirim',
+                title : 'Document Object Model'
+            };
+            alert(document.body.myData.title);
+            alert(document.body.id); // test
+            alert(document.body.something); // undefined - 사용자 정의 속성은 자돋으로 DOM속성으로 변하지는 않는다.
+        </script>
+    </body>
+</html>

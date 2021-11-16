@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="elem">Hello <b>world</b></div>
+        <script>
+            /*
+            let elem = document.getElementById("elem");
+            alert(elem.innerHTML); // Hello <b>world</b>
+
+            elem.innerHTML = "<p> A new element </p>"; // DOM을 완전히 바꾼다!
+            alert(elem.innerHTML); // <p> A new element </p>
+
+            // 결과물은 A new element
+            */
+
+
+            // outerHTML 사용하는 경우는 거의 없다. innerHTML 엄청 많이 씀!
+            let elem = document.getElementById("elem");
+            alert(elem.outerHTML); //<div id="elem">Hello <b>world</b></div>
+
+            elem.outerHTML = "<p> A new element </p>";
+            alert(elem.outerHTML); //<div id="elem">Hello <b>world</b></div>
+            
+            // 결과물은 A new element
+
+
+            // 둘 다 DOM은 바꾼다. 근데 outerHTML은 html 요소를 바꾸지는 않는다.
+            // 둘의 동작이 다르다는 것 알아두기!
+
+        </script>
+    </body>
+</html>

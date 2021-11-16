@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .alert{
+                padding: 15px;
+                border: 1px solid #d6e9c6;
+                color: #206e1e;
+                background-color: #d6e9c6;
+            }
+        </style>
+    </head>
+    <body>
+        <!--<div class="alert">
+            <strong>안녕하세요!</strong> 주요 메세지를 확인하셨습니다.
+        </div>-->
+
+        <!-- 전체적으로 위와 비슷한 일을 한다! -->
+               <!-- 명령어들 잘 기억해두기! -->
+        <script>
+            let check = document.createElement("check");
+            check.className = "alert";
+            check.innerHTML = "<strong>안녕하세요!</strong> 주요 메세지를 확인하셨습니다.";
+            document.body.append(check);
+
+            /* 3초 후 창 없애기 */
+            setTimeout(()=> check.remove(), 3000);
+        </script>
+    </body>
+</html>

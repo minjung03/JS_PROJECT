@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="elem" about="Elephant"></div>
+        <script>
+            alert(elem.getAttribute('About')); // about 이던 About 이던 상관 X
+            elem.setAttribute('test', 1000);
+
+            for(let attr of elem.attributes){ // 속성 전체 나열하기
+                alert(`${attr.name} = ${attr.value}`);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <div>프로퍼티를 연습합니다..</div>
+        <script>
+            let elem = document.body; // 바디노드 읽어오기
+            alert(elem.constructor.name);
+            alert(elem.nodeType); // 일반 요소는 1이 출력
+            alert(document.nodeType); // 문서 자체는 9가 출력
+            alert(document.body.nodeName);
+            elem.innerHTML = "글자1";
+            elem.innerHTML = "<h1>글자2</h1>" // overwrite 된다. (덮어씌움)
+            elem.innerHTML += "<b>글자3</b>";  //덮어씌우기 싫다면 + 사용!
+        </script>
+
+    </body>
+</html>
